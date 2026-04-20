@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti 🩵</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* FONDO */
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#a3bed3;
+}
+
+/* BOTÓN INICIO */
+#inicio{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:25px;
+    background:#99c8f7;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* CONTENIDO */
+#contenido{
+    display:none;
+    padding:20px;
+}
+
+/* HEADER */
+header{
+    background:#b0d7fc;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.perfil{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* CONTADOR */
+.contador{
+    background:rgb(147, 192, 206);
+    margin:20px 0;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    font-size:18px;
+}
+
+/* CALENDARIO */
+.calendario{
+    width:220px;
+    margin:auto;
+    background:rgb(250, 177, 232);
+    border-radius:15px;
+    padding:10px;
+    text-align:center;
+}
+
+#mes{
+    font-weight:bold;
+    color:#4da6ff;
+}
+
+#dias{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+    font-size:14px;
+}
+
+.dia{
+    padding:5px;
+}
+
+.hoy{
+    background:#4da6ff;
+    color:white;
+    border-radius:50%;
+}
+
+/* CARTA */
+.carta{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.carta span{
+    color:#4da6ff;
+    font-weight:bold;
+}
+
+.final{
+    font-family:'Great Vibes';
+    font-size:24px;
+}
+
+/* GALERÍA */
+.galeria{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* LINK */
+.libro{
+    text-align:center;
+    margin-top:20px;
+}
+
+.libro a{
+    background:#4da6ff;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inicio">
+    <button onclick="entrar()">Tocame 🩵</button>
+</div>
+
+<div id="contenido">
+
+<header>
+    <h1>Para ti 🩵</h1>
+    <img src="WhatsApp Image 2026-04-08 at 11.23.37.jpeg" class="perfil">
+</header>
+
+<div class="contador">
+    <h3>Tiempo juntos</h3>
+    <p id="tiempo"></p>
+</div>
+
+<div class="calendario">
+    <div id="mes"></div>
+    <div id="dias"></div>
+</div>
+
+<div class="carta">
+<p>
+ Amor,
+
+A veces me quedo pensando en lo bonito que es tenerte en mi vida y en cómo, sin darme cuenta, te volviste alguien tan importante para mí. No es solo lo que haces, sino quién eres: tu forma de hablar, de reír, de entenderme incluso cuando no digo nada… todo eso tiene un valor enorme para mí.
+
+Quiero que sepas que contigo he aprendido que el amor no tiene que ser perfecto para ser real, que se construye con pequeños momentos, con detalles, con paciencia y con cariño. Y cada día a tu lado, incluso en los días simples, se siente especial.
+
+Hay muchas cosas que admiro de ti, más de las que quizás imaginas. Tu manera de seguir adelante, tu forma de ser, tu esencia… todo eso me hace sentir orgullosa de estar contigo. Eres alguien que suma, que inspira y que hace que mi mundo sea más bonito.
+
+Si algún día dudas de lo mucho que vales o de lo que significas, recuerda esto: eres importante para mí, más de lo que las palabras pueden explicar. Me haces feliz, me haces sentir bien, y eso es algo que nunca voy a dejar de valorar.
+
+Gracias por estar, por quedarte, por ser tú. 🩵
+
+<span>Y es que contigo todo cambia todo es diferente</span>.
+</p>
+
+<p>
+Eres mi paz, Mi felicidad, Mi estrellita favorita 🩵
+</p>
+
+<p class="final">
+Te amo 🩵
+</p>
+</div>
+
+<div class="galeria">
+<img src="WhatsApp Image 2026-04-08 at 23.11.09.jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.25 (1).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.25 (2).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.25 (2).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.25 (3).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.25.jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.30 (1).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.43.30.jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.45.22 (1).jpeg">
+<img src="WhatsApp Image 2026-04-20 at 17.45.22.jpeg">
+</div>
+
+
+<div class="libro">
+<a href="Cuentos-Pardo.pdf" target="_blank">Leer nuestro cuento</a>
+</div>
+
+</div>
+
+<script>
+
+/* BOTÓN */
+function entrar(){
+    document.getElementById("inicio").style.display="none";
+    document.getElementById("contenido").style.display="block";
+}
+
+/* CONTADOR REAL */
+function actualizarTiempo(){
+    const inicio = new Date("2025-11-13T00:00:00");
+    const ahora = new Date();
+
+    let diff = ahora - inicio;
+
+    let dias = Math.floor(diff / (1000*60*60*24));
+    let horas = Math.floor((diff / (1000*60*60)) % 24);
+    let minutos = Math.floor((diff / (1000*60)) % 60);
+    let segundos = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("tiempo").innerHTML =
+    dias+" días "+horas+"h "+minutos+"m "+segundos+"s";
+}
+
+setInterval(actualizarTiempo,1000);
+
+/* CALENDARIO REAL */
+function calendario(){
+    const fecha = new Date();
+    const mes = fecha.getMonth();
+    const año = fecha.getFullYear();
+
+    const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio",
+                   "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+    document.getElementById("mes").innerText = meses[mes]+" "+año;
+
+    let primerDia = new Date(año,mes,1).getDay();
+    let totalDias = new Date(año,mes+1,0).getDate();
+
+    let html = "";
+
+    for(let i=0;i<primerDia;i++){ html+="<div></div>"; }
+
+    for(let d=1; d<=totalDias; d++){
+        let clase="dia";
+        if(d===fecha.getDate()) clase+=" hoy";
+        html+=`<div class="${clase}">${d}</div>`;
+    }
+
+    document.getElementById("dias").innerHTML = html;
+}
+
+calendario();
+
+</script>
+
+</body>
+</html>
